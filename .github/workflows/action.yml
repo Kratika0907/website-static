@@ -11,7 +11,7 @@ jobs:
             - name : Copy a folder 
               run: |
                 echo "hello kratika"
-                mkdir -p ./dist/members
+                mkdir -p /dist/members
                 echo "hello kratika1"
-                rsync -r ./members ./dist/members 
+                rsync -r /members /dist/members 
               shell: bash           
