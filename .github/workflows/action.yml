@@ -1,0 +1,18 @@
+name: Combine members data 
+on : 
+    push : 
+        branches:
+            - main
+jobs: 
+    job1:
+        runs-on : ubuntu-latest
+        defaults:
+            run:
+                shell: bash
+        steps:
+            -name : Copy a folder 
+            run : |
+                echo "hello kratika"
+                mkdir -p ./dist/members
+                echo "hello kratika1"
+                rsync -r ./members ./dist/members        
