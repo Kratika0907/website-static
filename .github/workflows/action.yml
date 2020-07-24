@@ -5,14 +5,13 @@ on :
             - main
 jobs: 
     job1:
+        name : job1 copy
         runs-on : ubuntu-latest
-        defaults:
-            run:
-                shell: bash
         steps:
-            -name : Copy a folder 
-            run : |
+            - name : Copy a folder 
+              run: |
                 echo "hello kratika"
                 mkdir -p ./dist/members
                 echo "hello kratika1"
-                rsync -r ./members ./dist/members        
+                rsync -r ./members ./dist/members 
+              shell: bash           
