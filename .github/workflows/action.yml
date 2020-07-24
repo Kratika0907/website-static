@@ -8,10 +8,11 @@ jobs:
         name : job1 copy
         runs-on : ubuntu-latest
         steps:
+            - uses: actions/checkout@main
             - name : Copy a folder 
               run: |
                 echo "hello kratika"
-               
+                mkdir -p dist/member
                 echo "hello kratika1"
-                rsync -r /members /dist/members 
+                rsync -r ./members ./dist/members 
               shell: bash           
