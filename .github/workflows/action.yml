@@ -26,5 +26,7 @@ jobs:
             - name : Push changes
               uses:  Kratika0907/github-push-action@main
                run:|
-                echo "pushing changes"  
+                echo "pushing changes" 
+              with:
+                github_token: ${{ secrets.GITHUB_TOKEN }}   
 
