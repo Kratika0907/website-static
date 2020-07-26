@@ -24,6 +24,6 @@ jobs:
             - name : Push changes
                run:|
                 echo "pushing changes" 
-                git push origin HEAD:main
+                git push origin main
               
 
