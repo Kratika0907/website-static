@@ -13,11 +13,10 @@ jobs:
                   echo "install jq"
                   sudo apt-get install jq
         - uses: actions/checkout@main
-        - name: clean dist folder if present
-          run: |
-                  echo "cleaning dist folder"
-                  cd ./dist
-                  rm -rf *       
+        # - name: clean dist folder if present
+        #   run: |
+        #           echo "cleaning dist folder"
+        #           rm -r dist     
         - name : Create a folder 
           run: |
                     echo "create dist folder and copy content"
