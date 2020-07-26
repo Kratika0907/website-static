@@ -17,7 +17,7 @@ jobs:
           run: |
                   echo "cleaning dist folder"
                   rm -rf *
-                  working-directory: ./dist           
+                  working-directory: ./dist          
         - name : Create a folder 
           run: |
                     echo "create dist folder and copy content"
