@@ -8,22 +8,22 @@ jobs:
         name : job1 copy
         runs-on : ubuntu-latest
         steps:
-            - uses: actions/checkout@main            
-            - name : Create a folder 
-              run: |
-                echo "hello kratika"
-                mkdir -p dist/member
-                echo "hello kratika1"
-            - name : Commit files
-              run: |
-                echo "commiting files"
-                git config --local user.email "kratika0907@gmail.com"
-                git config --local user.name "Kratika0907"
-                git add .
-                git commit -m "Add folder"    
-            - name : Push changes
-               run:|
-                echo "pushing changes" 
-                git push origin main
+        - uses: actions/checkout@main            
+        - name : Create a folder 
+          run: |
+                    echo "hello kratika"
+                    mkdir -p dist/member
+                    echo "hello kratika1"
+        - name : Commit files
+          run: |
+                    echo "commiting files"
+                    git config --local user.email "kratika0907@gmail.com"
+                    git config --local user.name "Kratika0907"
+                    git add .
+                    git commit -m "Add folder"    
+        - name : Push changes
+          run: |
+                     echo "pushing changes" 
+                     git push origin main
               
 
