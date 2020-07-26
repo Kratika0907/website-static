@@ -24,7 +24,7 @@ jobs:
                 git add .
                 git commit -m "Add folder"    
             - name : Push changes
-              uses:  Kratika0907/github-push-action@main
+              uses:  Kratika0907/website-static@main
                run:|
                 echo "pushing changes" 
               with:
