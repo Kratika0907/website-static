@@ -16,15 +16,15 @@ jobs:
                 echo "hello kratika"
                 mkdir -p dist/member
                 echo "hello kratika1"
-            -name : Commit files
+            - name : Commit files
               run: |
                 echo "commiting files"
                 git config --local user.email "kratika0907@gmail.com"
                 git config --local user.name "Kratika0907"
                 git add .
                 git commit -m "Add folder"    
-            -name : Push changes
-             uses: ad-m/github-push-action@main
-              run: |
+            - name : Push changes
+              uses:  ad-m/github-push-action@main
+               run:|
                 echo "pushing changes"  
 
