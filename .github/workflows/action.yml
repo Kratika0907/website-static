@@ -13,7 +13,9 @@ jobs:
           run: |
                     echo "hello kratika"
                     mkdir dist
-                    echo "hello kratika1"
+                    cd ./dist
+                    cat > sample.txt
+                    echo ‘Random sample text’ > sample.txt
           working-directory: ./
         - name : Commit files
           run: |
