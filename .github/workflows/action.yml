@@ -12,8 +12,9 @@ jobs:
         - name : Create a folder 
           run: |
                     echo "hello kratika"
-                    mkdir -p dist/member
+                    mkdir dist
                     echo "hello kratika1"
+           working-directory: ./
         - name : Commit files
           run: |
                     echo "commiting files"
