@@ -10,22 +10,13 @@ let folderExist = false;
 let dirFiles = [];
 
 async function remove(dir) {
-    let m = await readDir(dir);
-    console.log(m)
-    if (m.length) {
-        folderExist = true;
-        dirFiles = m;
-    }
-    else {
-        folderExist = false;
-    }
-    if(!folderExist) {
+    let flag = fs.existsSync(dir);
+    if (!flag) {
         fs.mkdir('./dist', function(err) {
-            throw new Error(err);
+            console.log(err)
         })
-    }
-    else {
-        console.log('else block')
+    } else {
+        let dirFiles = await readDir(dir);
         let arr = [];
         for (let i = 0 ; i < dirFiles.length ; ++i) {
             console.log(`${dir}/${dirFiles[i]}`)
@@ -39,25 +30,9 @@ async function remove(dir) {
                 })
             })
         })
+
     }
+    
 }
 
 remove('./dist')
-// fs.readdir('./dist', function(err, data) {
-//     if (err) {
-//         folderExist = false
-//     }
-//     else {
-//         dirFiles = data;
-//         folderExist = true;
-//     }
-// })
-
-// fs.rmdir('./dist' , function(err) {
-//     if (err) {
-//         fs.mkdir('./dist', function(err) {
-//             if (err) console.log(err)
-//             console.log('dir created')
-//         })
-//     }
-// })
