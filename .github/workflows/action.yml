@@ -8,24 +8,23 @@ jobs:
         name : data copy into dist
         runs-on : ubuntu-latest
         steps:
-        - name: install jq
+        - name: install node 
           run : |
-                  echo "install jq"
-                  sudo apt-get install jq
+                  echo "install node"
+                  sudo apt update
+                  sudo apt install nodejs npm
         - uses: actions/checkout@main
-        # - name: clean dist folder if present
-        #   run: |
-        #           echo "cleaning dist folder"
-        #           rm -r dist     
-        - name : Create a folder 
+        - name : Create a new dist folder 
           run: |
-                    echo "create dist folder and copy content"
-                    mkdir dist
-                    cd ./dist
-                    cat > sample.txt
-                    echo ‘Random sample text’ > sample.txt
-                    cd ../members/ankush
-                    cat data.json | jq .
+                    echo "create dist folder"
+                    node remove
+                    echo 'done with folder creation'
+          working-directory: ./
+        - name : Create data into dist folder 
+          run: |
+                    echo "copy data"
+                    node copy
+                    echo 'done with data copy'
           working-directory: ./
         - name : Commit files
           run: |
@@ -33,7 +32,7 @@ jobs:
                     git config --local user.email "kratika0907@gmail.com"
                     git config --local user.name "Kratika0907"
                     git add .
-                    git commit -m "Add folder"    
+                    git commit -m "new folder created"    
         - name : Push changes
           run: |
                      echo "pushing changes" 
