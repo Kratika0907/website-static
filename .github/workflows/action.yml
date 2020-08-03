@@ -19,13 +19,13 @@ jobs:
                     echo "create dist folder"
                     node remove
                     echo 'done with folder creation'
-          working-directory: ./
+          working-directory: ./scripts
         - name : Create data into dist folder 
           run: |
                     echo "copy data"
                     node copy
                     echo 'done with data copy'
-          working-directory: ./
+          working-directory: ./scripts
         - name : Commit files
           run: |
                     echo "commiting files"

@@ -5,9 +5,10 @@
 	"yoe": 8,
 	"company": "Pesto Tech",
 	"designation": "Instructor",
-	"img": "./img.png",
+	"img_b64": "./img.png", 
 	"github_id": "ankushdharkar",
 	"linkedin_id": "ankushdharkar",
 	"twitter_id": "ankushdharkar",
 	"instagram_id": "ankushdharkar"
 }
+
