@@ -70,7 +70,7 @@ fileWalker("../members").then((data) => {
   data.forEach((userArray) => {
     newData[userArray[0]] = userArray[1];
   });
-  fs.writeFile("./dist/members.json", JSON.stringify(newData), function (err) {
+  fs.writeFile("../dist/members.json", JSON.stringify(newData), function (err) {
     console.log({ err });
   });
 });
