@@ -10,7 +10,7 @@ let dirFiles = [];
 async function remove(dir) {
   let flag = fs.existsSync(dir);
   if (!flag) {
-    fs.mkdir("./dist", function (err) {
+    fs.mkdir("../dist", function (err) {
       console.log(err);
     });
   } else {
@@ -21,10 +21,10 @@ async function remove(dir) {
       arr.push(delfile(`${dir}/${dirFiles[i]}`));
     }
     Promise.all(arr).then(() => {
-      fs.rmdir("./dist", function (err) {
+      fs.rmdir("../dist", function (err) {
         if (err) console.log(err, "err");
         else
-          fs.mkdir("./dist", function (err) {
+          fs.mkdir("../dist", function (err) {
             console.log("dir created");
           });
       });
