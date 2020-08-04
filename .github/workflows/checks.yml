@@ -7,11 +7,8 @@ name: 'Checks for unique name, id and social link'
 jobs:
   hello_world_job:
     runs-on: ubuntu-latest
-    name: A job to say hello
-    steps:
+    steps :
       - name: Checkout
         uses: actions/checkout@kratika
-      - name: check perform
-        uses: ./scripts/checks.js
-        with:
-          node-version: 10.x
+      - name: run file 
+        uses: ./
