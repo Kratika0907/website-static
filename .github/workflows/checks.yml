@@ -12,4 +12,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@kratika
       - name: check perform
-        uses: ./scripts/checks
+        uses: ./scripts/checks.js
+        with:
+          node-version: 10.x
