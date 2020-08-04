@@ -1,9 +1,16 @@
+---
 name: 'Checks for unique name, id and social link'
-description: 'Perfrom above checks on the PR opened'
-on : 
-    pull_request
-runs:
-  using: 'node12'
-  main: '../../scripts/checks.js'
-
- 
+description: Perfrom above checks on the PR opened
+'on':
+  push:
+    branches:
+      - kratika
+jobs:
+  hello_world_job:
+    runs-on: ubuntu-latest
+    name: A job to say hello
+    steps:
+      - name: Checkout
+        uses: actions/checkout@kratika
+      - name: check perform
+        uses: ./scripts/checks
