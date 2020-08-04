@@ -6,7 +6,7 @@ async function run() {
     try {
         if (github.context.eventName === 'push') {
             const pushPayload = github.context.payload
-            core.info(pushPayload)
+            console.log(pushPayload)
     } 
     } catch (error) {
       core.setFailed(error.message);
