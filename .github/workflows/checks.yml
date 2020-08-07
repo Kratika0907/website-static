@@ -1,7 +1,7 @@
 ---
 name: 'Checks for unique name, id and social link'
 'on':
-  push:
+  pull_request:
     branches:
       - kratika
 jobs:
