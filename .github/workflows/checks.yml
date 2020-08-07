@@ -9,6 +9,8 @@ jobs:
     runs-on: ubuntu-latest
     steps :
       - name: Checkout
-        uses: actions/checkout@kratika
+        uses: actions/checkout@kratika // re-run copy js part 
       - name: run file 
         uses: ./
+        with:
+          myToken: ${{ secrets.GITHUB_TOKEN }}
