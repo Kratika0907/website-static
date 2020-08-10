@@ -1,7 +1,7 @@
 
 name: 'Checks for unique name, id and social link'
 'on':
-  pull_request:
+  push:
     branches:
       - kratika
 jobs:
@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps :
       - name: Checkout
-        uses: actions/checkout@v1
+        uses: actions/checkout@kratika
       - name: run file 
         uses: ./
         with:
