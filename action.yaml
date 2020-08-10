@@ -1,0 +1,5 @@
+name: 'Check'
+description: 'Drafts a GitHub release with the changes introduced by a newly created version tag.'
+runs:
+  using: 'node12'
+  main: './scripts/checks.js'

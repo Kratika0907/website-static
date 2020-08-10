@@ -1,5 +1,5 @@
 name: Combine members data 
-on : 
+on: 
     push : 
         branches:
             - main
