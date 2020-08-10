@@ -12,6 +12,4 @@ jobs:
         uses: actions/checkout@kratika
       - name: run file 
         run: pwd
-        uses: ..
-        with:
-          myToken: ${{ secrets.GITHUB_TOKEN }}
+        
