@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps :
       - name: Checkout
-        uses: actions/checkout@kratika
+        uses: actions/checkout@v1
       - name: run file 
         run: pwd
         
