@@ -11,5 +11,4 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v1
       - name: run file 
-        run: pwd
-        
+        uses: ./
